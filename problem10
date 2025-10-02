@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    std::cin >> num;
+    if (num == 0) {
+        // No numbers entered, handle as needed
+        return 0;
+    }
+    int max_val = num;
+    while (std::cin >> num) {
+        if (num == 0) {
+            break;
+        }
+        if (num > max_val) {
+            max_val = num;
+        }
+    }
+    std::cout << "The maximum value is " << max_val << std::endl;
+    return 0;
+}
